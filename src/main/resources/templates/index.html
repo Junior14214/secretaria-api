@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+
+<head>
+    <script src="/js/lib/angular.min.js"></script>
+    <script src="/js/lib/angular-route.min.js"></script>
+    <script src="/js/lib/angular-resource.min.js"></script>
+    <script src="/js/lib/dirPagination.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/controller/cadastro-controller.js"></script>
+    <script src="/js/controller/lista-controller.js"></script>
+    <script src="/js/controller/dizimistas-controller.js"></script>
+    <script src="/js/controller/relatorio-dizimistas-controller.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/sidebar/sidebar.css">
+    <script src="https://unpkg.com/ionicons@4.1.1/dist/ionicons.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: #3c8dbc">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <!-- Split dropleft button -->
+                <div class="btn-group">
+                    <div class="btn-group dropleft" role="group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="sr-only">Toggle Dropleft</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" type="button">Sair</button>
+                            <button class="dropdown-item" type="button">Alterar Dados</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-sm">
+                        <h4>
+                            <ion-icon name="contact" class="align-middle"></ion-icon>
+                        </h4>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="height: 100%">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar" style="background: #222d32; padding-top: 10px; min-height: 550px">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column text-light">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="#">
+                                <span data-feather="home"></span>
+                                <strong>Ailton Arantes</strong>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/">
+                                <ion-icon name="home"></ion-icon>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropright text-light nav-link">
+                                <a class="btn dropdown-toggle text-light" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <ion-icon name="person"></ion-icon>
+                                    Cadastro
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <a class="dropdown-item" href="/#!/cadastro">Cadastrar Membro</a>
+                                    <a class="dropdown-item" href="/#!/dizimistas">Cadastrar Dizimistas</a>
+                                    <a class="dropdown-item">Something else here</a>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropright text-light nav-link">
+                                <a class="btn dropdown-toggle text-light" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <ion-icon name="list-box"></ion-icon>
+                                    Consutas
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <a class="dropdown-item" href="/#!/lista">Consultar Membros</a>
+                                    <a class="dropdown-item">Another action</a>
+                                    <a class="dropdown-item">Something else here</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropright text-light nav-link">
+                                <a class="btn dropdown-toggle text-light" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <ion-icon name="person"></ion-icon>
+                                    Relatórios
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <a class="dropdown-item">Cadastrar Membro</a>
+                                    <a class="dropdown-item">Another action</a>
+                                    <a class="dropdown-item">Something else here</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">
+                                <span data-feather="layers"></span>
+                                Integrations
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Saved reports</span>
+                        <a class="d-flex align-items-center text-muted" href="#">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span>
+                                Current month
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span>
+                                Last quarter
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span>
+                                Social engagement
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span>
+                                Year-end sale
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                    <ng-view></ng-view>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

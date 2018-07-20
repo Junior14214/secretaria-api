@@ -1,0 +1,189 @@
+<h3 class="text-center text-secondary">Cadastro de Membros</h3>
+<hr>
+
+<div class="alert alert-success alert-dismissible" ng-if="mensagem != ''">
+    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{mensagem.mensagem}}</strong>.
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Nome</strong>
+                <input type="text" class="form-control" ng-model="membro.nome" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Pai</strong>
+                <input type="text" class="form-control" ng-model="membro.pai" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Mãe</strong>
+                <input type="text" class="form-control" ng-model="membro.mae" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Sexo</strong>
+                <input type="text" class="form-control" ng-model="membro.sexo" />
+            </label>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="row">
+            <div class="col">
+                <label style="width: 100%">
+                    <strong>Data de Nascimento</strong>
+                    <input type="text" class="form-control" ng-model="membro.data_de_nascimento" />
+                </label>
+            </div>
+            <div class="col">
+                <label style="width: 100%">
+                    <strong>Profissão</strong>
+                    <input type="text" class="form-control" ng-model="membro.profissao" />
+                </label>
+            </div>
+            <div class="col">
+                <label style="width: 100%">
+                    <strong>Telefone</strong>
+                    <input type="text" class="form-control" ng-model="membro.telefone" />
+                </label>
+            </div>
+            <div class="col">
+                <label style="width: 100%">
+                    <strong>RG</strong>
+                    <input type="text" class="form-control" ng-model="membro.rg" />
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="row">
+            <div class="col">
+                <label style="width: 100%">
+                    <strong>CPF</strong>
+                    <input type="text" class="form-control" ng-model="membro.cpf" />
+                </label>
+            </div>
+            <div class="col">
+                <label style="width: 100%">
+                    <strong>País</strong>
+                    <input type="text" class="form-control" ng-model="membro.pais" />
+                </label>
+            </div>
+            <div class="col">
+                <label style="width: 100%">
+                    <strong>Naturalidade</strong>
+                    <input type="text" class="form-control" ng-model="membro.naturalidade" />
+                </label>
+            </div>
+            <div class="col">
+                <label style="width: 100%">
+                    <strong>Estado Civil</strong>
+                    <input type="text" class="form-control" ng-model="membro.estado_civil" />
+                </label>
+            </div>
+        </div>
+        <div class="w-100">
+            <div class="row">
+                <div class="col">
+                    <label style="width: 100%">
+                        <strong>Endereço</strong>
+                        <input type="text" class="form-control" ng-model="membro.endereco" />
+                    </label>
+                </div>
+                <div class="col">
+                    <label style="width: 100%">
+                        <strong>Bairro</strong>
+                        <input type="text" class="form-control" ng-model="membro.bairro" />
+                    </label>
+                </div>
+                <div class="col">
+                    <label style="width: 100%">
+                        <strong>Cidade</strong>
+                        <input type="text" class="form-control" ng-model="membro.cidade" />
+                    </label>
+                </div>
+                <div class="col">
+                    <label style="width: 100%">
+                        <strong>CEP</strong>
+                        <input type="text" class="form-control" ng-model="membro.cep" />
+                    </label>
+                </div>
+            </div>
+            <div class="w-100">
+                <div class="row">
+                    <div class="col">
+                        <label style="width: 100%">
+                            <strong>Batismo nas águas</strong>
+                            <input type="text" class="form-control" ng-model="membro.batismo_nas_aguas" />
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label style="width: 100%">
+                            <strong>Batismo no espírito santo</strong>
+                            <input type="text" class="form-control" ng-model="membro.batismo_no_espirito_santo" />
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label style="width: 100%">
+                            <strong>Data de inicio</strong>
+                            <input type="text" class="form-control" ng-model="membro.data_de_inicio" />
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label style="width: 100%">
+                            <strong>Dirigente</strong>
+                            <input type="text" class="form-control" ng-model="membro.dirigente" />
+                        </label>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="row">
+                        <div class="col">
+                            <label style="width: 100%">
+                                <strong>Cargo</strong>
+                                <input type="text" class="form-control" ng-model="membro.cargo" />
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label style="width: 100%">
+                                <strong>Congregação</strong>
+                                <input type="text" class="form-control" ng-model="membro.congregacao" />
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label style="width: 100%">
+                                <strong>Observações</strong>
+                                <input type="text" class="form-control" ng-model="membro.historico" />
+                            </label>
+                        </div>
+                        <div class="col">
+                            <form>
+                                <div class="form-group">
+                                    <label style="width: 100%">
+                                        <strong>Foto</strong>
+                                        <input type="file" class="form-control-file btn" id="exampleFormControlFile1">
+                                    </label>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="w-100" ng-if="exibirHistorico">
+                        <div class="col">
+                            <label style="width: 100%">
+                                <strong>Histórico</strong>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ng-model="membro.historico"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col text-right">
+                        <button ng-click="submeter()" class="btn btn-primary" style="width: 100px">Salvar</button>
+                    </div>
+                </div>
+            </div>

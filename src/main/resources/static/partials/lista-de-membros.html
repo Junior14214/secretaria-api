@@ -1,0 +1,83 @@
+<h3 class="text-center text-secondary">Lista de Membros</h3>
+<hr>
+
+<div class="alert alert-success alert-dismissible" ng-if="mensagem.id == 1">
+    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{mensagem.mensagem}}</strong>.
+</div>
+
+<div class="alert alert-success alert-dismissible" ng-if="mensagem2 != ''">
+    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{mensagem2}}</strong>.
+</div>
+
+<div class="col-md-4">
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <ion-icon name="search"></ion-icon>
+            </div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Filtrar" ng-model="filtro">
+    </div>
+</div>
+
+<table class="table table-hover" style="width: 1055px">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Congregação</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Data de Nascimento</th>
+            <th scope="col">
+                <center>Opções</center>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr dir-paginate="membros in membros | filter: filtro | itemsPerPage:7">
+            <th scope="row">{{$index + 1}}</th>
+            <td>{{membros.id}}</td>
+            <td>{{membros.nome}}</td>
+            <td>{{membros.cargo}}</td>
+            <td>{{membros.congregacao}}</td>
+            <td>{{membros.cpf}}</td>
+            <td>{{membros.telefone}}</td>
+            <td>{{membros.data_de_nascimento}}</td>
+            <td>
+                <center>
+                    <div class="dropleft" style="padding-top:10px">
+                        <a href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <ion-icon style="color: #222d32" name="more" size="small"></ion-icon>
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="/#!/editar/{{membros.id }}">Editar</a>
+                            <a class="dropdown-item" href="" ng-click="excluir(membros)">Excluir</a>
+                            <a class="dropdown-item" href="#">Visualizar</a>
+                        </div>
+                    </div>
+                </center>
+
+                <!-- <div class="dropdown">
+                    <center class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <ion-icon name="more"></ion-icon>
+                    </center>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div style="margin-left: 65%">
+    <dir-pagination-controls max-size="6" boundary-links="true"></dir-pagination-controls>
+</div>

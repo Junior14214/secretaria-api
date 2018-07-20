@@ -1,0 +1,168 @@
+<h3 class="text-center text-secondary" style="width: 900px; margin-left: 10%">
+    Cadastrar Dizimistas</h3>
+<hr style="width: 900px; margin-left: 10%">
+
+<div class="alert alert-success alert-dismissible" ng-if="mensagem != ''">
+    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{mensagem.mensagem}}</strong>.
+</div>
+
+<div class="container" style="width: 900px; margin-left: 10%">
+    <div class="row">
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Nome</strong>
+                <input type="text" class="form-control" ng-model="dizimo[0].nome" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Valor</strong>
+                <input type="text" class="form-control" ng-model="dizimo[0].valor" />
+            </label>
+        </div>
+        <div class="col  col-sm-1">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="addInput(dizimo)" ng-show="count == 0">
+                    <ion-icon name="add" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="removeInput(0)" ng-show="false">
+                    <ion-icon name="close" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+    </div>
+    <div class="row" ng-if="count >= 1">
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Nome</strong>
+                <input type="text" class="form-control" ng-model="dizimo[1].nome" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Valor</strong>
+                <input type="text" class="form-control" ng-model="dizimo[1].valor" />
+            </label>
+        </div>
+        <div class="col col-sm-1">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="addInput(dizimo)" ng-show="count == 1">
+                    <ion-icon name="add" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="removeInput(1)" ng-show="count == 1">
+                    <ion-icon name="close" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+    </div>
+    <div class="row" ng-if="count >= 2">
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Nome</strong>
+                <input type="text" class="form-control" ng-model="dizimo[2].nome" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Valor</strong>
+                <input type="text" class="form-control" ng-model="dizimo[2].valor" />
+            </label>
+        </div>
+        <div class="col col-sm-1">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="addInput(dizimo)" ng-show="count == 2">
+                    <ion-icon name="add" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="removeInput(2)" ng-show="count == 2">
+                    <ion-icon name="close" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+    </div>
+    <div class="row" ng-if="count >= 3">
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Nome</strong>
+                <input type="text" class="form-control" ng-model="dizimo[3].nome" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Valor</strong>
+                <input type="text" class="form-control" ng-model="dizimo[3].valor" />
+            </label>
+        </div>
+        <div class="col col-sm-1">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="addInput(dizimo)" ng-show="count == 3">
+                    <ion-icon name="add" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="removeInput(3)" ng-show="count == 3">
+                    <ion-icon name="close" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+    </div>
+    <div class="row" ng-if="count >= 4">
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Nome</strong>
+                <input type="text" class="form-control" ng-model="dizimo[4].nome" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Valor</strong>
+                <input type="text" class="form-control" ng-model="dizimo[4].valor" />
+            </label>
+        </div>
+        <div class="col col-sm-1">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="addInput(dizimo)" ng-show="count == 4">
+                    <ion-icon name="add" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="removeInput(4)" ng-show="count == 4">
+                    <ion-icon name="close" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+    </div>
+    <div class="row" ng-if="count >= 5">
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Nome</strong>
+                <input type="text" class="form-control" ng-model="dizimo[5].nome" />
+            </label>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <strong>Valor</strong>
+                <input type="text" class="form-control" ng-model="dizimo[5].valor" />
+            </label>
+        </div>
+        <div class="col col-sm-1">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="addInput(dizimo)" ng-show="count <= 5">
+                    <ion-icon name="add" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+        <div class="col">
+            <label style="width: 100%">
+                <a href="" class="text-secondary" ng-click="removeInput(5)" ng-show="count >= 5">
+                    <ion-icon name="close" size="small" style="margin-top: 30px"></ion-icon>
+                </a>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="submeter()">Cadastrar</button>
+</div>
